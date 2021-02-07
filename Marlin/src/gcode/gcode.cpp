@@ -473,6 +473,10 @@ void GcodeSuite::process_parsed_command(const bool no_ok/*=false*/) {
           case 34: M34(); break;                                  // M34: Set SD card sorting options
         #endif
 
+        #if ENABLED(SDCARD_REPORT_INFORMATION)
+          case 39: M39(); break;                                  // M39: Report SD card information
+        #endif
+
         case 928: M928(); break;                                  // M928: Start SD write
       #endif // SDSUPPORT
 

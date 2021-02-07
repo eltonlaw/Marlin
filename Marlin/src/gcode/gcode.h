@@ -551,6 +551,7 @@ private:
     #if BOTH(SDCARD_SORT_ALPHA, SDSORT_GCODE)
       static void M34();
     #endif
+    TERN_(SDCARD_REPORT_INFORMATION, static void M39());
   #endif
 
   TERN_(DIRECT_PIN_CONTROL, static void M42());
